@@ -8,14 +8,14 @@ spec:
   selector:
     matchLabels:
       app: employees
-  replicas: 3    
+  replicas: 2    
   template:
     metadata:
       labels:
         app: employees
     spec:
       containers:
-      - image: 387584877503.dkr.ecr.us-east-1.amazonaws.com/web-app:v0.3
+      - image: 387584877503.dkr.ecr.us-east-1.amazonaws.com/web-app:v0.4
         name: employees-deployment
         env:
         - name: DBHOST
