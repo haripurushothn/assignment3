@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sql-deployment
+  namespace: lab3
   labels:
     app: mysql
 spec:
@@ -28,4 +29,4 @@ spec:
       volumes:
        - name: mysql-pvc
          persistentVolumeClaim:
-           claimName: mysql-pvc         
+           claimName: mysql-pvc
